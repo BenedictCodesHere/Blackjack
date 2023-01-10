@@ -75,7 +75,7 @@ function playerChoosesStay () {
 }
 
 
-GameLoop: for (let i = (playerScore + dealerScore); i < 10; i = i){
+GameLoop: for (let i = playerScore + dealerScore; i < 10; i = playerScore + dealerScore){
     if (playerTotal == 0 && dealerTotal == 0) {
   beginGame();
   if (playerScore === 20) break GameLoop; else{
