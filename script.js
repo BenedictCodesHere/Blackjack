@@ -6,7 +6,12 @@ let playerTotal = 0;
 let dealerTotal = 0;
 let playersFirstDeal = randomRange(4, 21);
 let beginGame = function startGame() {
-  alert(`Click "ok" to play Blackjack`);
+  if(confirm(`Click "ok" to play Blackjack`) == 1) {
+
+  } else {
+    return  playerScore = 20, alert(`You don't want to play. Unfortunate.`);
+  }
+  
 }
 
 function resetToZero () {
@@ -34,7 +39,8 @@ function playerChoosesHit() {
 
 function playerChoosesStay () {
      
-  alert(`Dealer has ${dealerTotal}`)
+  alert(`You stay.
+  Dealer has ${dealerTotal}`)
   while (dealerTotal < 17 && dealerTotal !== 0) {
     alert(`Dealer has ${dealerTotal}. 
     Dealer hits.`);
@@ -69,10 +75,10 @@ function playerChoosesStay () {
 }
 
 
-
-  for (let i = (playerScore + dealerScore); i < 10; i = i){
+GameLoop: for (let i = (playerScore + dealerScore); i < 10; i = i){
     if (playerTotal == 0 && dealerTotal == 0) {
   beginGame();
+  if (playerScore === 20) break GameLoop; else{
   playersFirstDeal = randomRange(4, 21);
   playerTotal = playersFirstDeal;
   if (playersFirstDeal === 21) {
@@ -116,6 +122,7 @@ function playerChoosesStay () {
 
      }
   }
+}
 }
 
   
