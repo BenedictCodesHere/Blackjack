@@ -1,6 +1,10 @@
 # Blackjack
 Using Javascript to create an interactive prompt-box game modelled on the classic card game Blackjack, also known as "21".
 
+## [Link to Deployed Application]
+(https://benedictcodeshere.github.io/Blackjack/)
+
+
 ## Description
 
 The aim of the project is to use objects, functions, conditional logic, and loops to create an iterable version of the game "Blackjack".
